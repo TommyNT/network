@@ -8,7 +8,7 @@ function onDeviceReady() {
 
 function checkConnection() {
     var networkState = navigator.connection.type;
-
+console.log(networkState);
     var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
     states[Connection.ETHERNET] = 'Ethernet connection';
@@ -19,5 +19,5 @@ function checkConnection() {
     states[Connection.CELL]     = 'Cell generic connection';
     states[Connection.NONE]     = 'No network connection';
 
-    navigator.notification.alert('Connection type: ' + states[networkState]);
+    alert('Connection type: ' + states[networkState]);
 }
